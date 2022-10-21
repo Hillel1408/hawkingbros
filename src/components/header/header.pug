@@ -1,0 +1,40 @@
+-
+    var navLinks = [
+        {textLink: 'Каталог товаров', href: '#'},
+        {textLink: 'доставка и оплата', href: '#'},
+        {textLink: 'Цены', href: '#'},
+        {textLink: 'Контакты', href: '#'},
+    ]
+    var socialLinks = [
+        {textLink: 'Вконтакте', href: '#', icon: 'icon-1'},
+        {textLink: 'Телеграм', href: '#', icon: 'icon-3'},
+        {textLink: 'Инстаграм', href: '#', icon: 'icon-instagram'},
+        {textLink: 'Whatsapp', href: '#', icon: 'icon-4'},
+    ]
+
+header.header
+    .header__wrapper
+        .header__logo
+            a(href="/")
+                img(src="./assets/images/logo.svg", alt="Логотип")
+        nav.header__nav
+            .header__nav-icon
+                span
+                span
+                span
+            ul.header__nav-list
+                each val in navLinks
+                    li.header__nav-item
+                        a.header__nav-link(href= val.href)= val.textLink
+        a.header__tel(href="tel:+78125092198")
+            span.header__tel-span +7 (812)
+            span  509 21 98
+        a.header__back-call(href="") Перезвоните мне
+        ul.social-links.header__social-links
+            each val in socialLinks
+                li
+                    a(class= val.icon href= val.href)= val.textLink
+        .header__icons
+            .header__icons-icon.icon-5
+            .header__icons-icon.icon-6
+            .header__icons-icon.icon-7

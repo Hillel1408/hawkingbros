@@ -1,1 +1,170 @@
-
+.header {
+    &__wrapper {
+        max-width: 1790px;
+        margin: 0 auto;
+        padding: 26px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @media (max-width: 1820px) {
+            max-width: none;
+            padding: 26px 15px;
+        }
+    }
+    &__nav {
+        &-list {
+            @media (min-width: ($md2 + 1 + px)) {
+                display: flex;
+                flex-wrap: wrap;
+            }
+            @media (max-width: ($md2 + px)) {
+                transform: translate(0px, -100%);
+                transition: transform 0.8s ease 0s;
+                position: fixed;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                overflow: auto;
+                padding: 70px 10px 30px 10px;
+                background-color: white;
+                opacity: 0.9;
+                z-index: 1;
+                &._active {
+                    transform: translate(0px, 0%);
+                }
+            }
+        }
+        &-link {
+            display: block;
+            padding: 5px 10px;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 23px;
+            text-transform: uppercase;
+            color: #4c858b;
+            @media (any-hover: hover) {
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+            @media (max-width: ($md2 + px)) {
+                display: block;
+                margin: 0 auto;
+                text-align: center;
+            }
+        }
+        &-icon {
+            display: none;
+            @media (max-width: ($md2 + px)) {
+                display: block;
+                position: relative;
+                width: 30px;
+                height: 18px;
+                cursor: pointer;
+                z-index: 2;
+                span {
+                    transition: all 0.3s ease 0s;
+                    top: calc(50% - 1px);
+                    left: 0px;
+                    position: absolute;
+                    width: 100%;
+                    height: 2px;
+                    background-color: #4c858b;
+                    &:first-child {
+                        top: 0px;
+                    }
+                    &:last-child {
+                        top: auto;
+                        bottom: 0px;
+                    }
+                }
+            }
+            &._active {
+                span {
+                    transform: scale(0);
+                    &:first-child {
+                        transform: rotate(-45deg);
+                        top: calc(50% - 1px);
+                    }
+                    &:last-child {
+                        transform: rotate(45deg);
+                        bottom: calc(50% - 1px);
+                    }
+                }
+            }
+        }
+    }
+    &__social-links {
+        display: flex;
+        align-items: center;
+        li {
+            &:not(:last-child) {
+                margin-right: 12px;
+            }
+            a {
+                color: #4c858b;
+                &.icon-1:before {
+                    font-size: 11.67px;
+                }
+                &.icon-3:before {
+                    font-size: 16.67px;
+                }
+                &.icon-instagram:before {
+                    font-size: 16px;
+                }
+                &.icon-4:before {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+    &__icons {
+        display: flex;
+        align-items: center;
+        &-icon {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #e5e5e5;
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            &:not(:last-child) {
+                margin-right: 16px;
+            }
+            &.icon-5 {
+                font-size: 22px;
+                color: #4c858b;
+            }
+            &.icon-6 {
+                font-size: 20.46px;
+                color: #e33e54;
+            }
+            &.icon-7 {
+                font-size: 20.22px;
+                color: black;
+            }
+        }
+    }
+    &__back-call {
+        font-size: 14px;
+        color: #ae2236;
+        text-transform: uppercase;
+        line-height: 17px;
+        font-weight: 700;
+        border-bottom: 1px dashed #ae2236;
+        padding-bottom: 5px;
+    }
+    &__tel {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 20px;
+        letter-spacing: 0.08em;
+        color: black;
+        &-span {
+            color: #4c858b;
+        }
+    }
+}
