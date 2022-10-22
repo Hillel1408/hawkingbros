@@ -1,0 +1,89 @@
+.intro {
+    padding: 30px 0;
+    &__title {
+        font-size: 60px;
+        font-weight: 700;
+        line-height: 73px;
+        margin-bottom: 41px;
+    }
+    &__links {
+        display: flex;
+        padding: 14px 0;
+        border-top: 1px solid #e5e5e5;
+        border-bottom: 1px solid #e5e5e5;
+        margin-bottom: 81px;
+        &-item {
+            display: flex;
+            align-items: center;
+            position: relative;
+            &:not(:last-child) {
+                margin-right: 20px;
+            }
+            &.icon-8 {
+                font-size: 7px;
+                color: #4c858b;
+                &:before {
+                    position: absolute;
+                    right: -13px;
+                }
+            }
+        }
+        &-link {
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 15px;
+            color: #b1b1b1;
+            &._active {
+                color: #4c858b;
+            }
+        }
+    }
+    &__text {
+        margin-bottom: 47px;
+    }
+    &__block {
+        position: relative;
+        &:after {
+            content: url('/assets/images/1.png');
+            position: absolute;
+            top: 0;
+            right: -180px;
+            z-index: -1;
+        }
+    }
+    &__content {
+        max-width: 629px;
+        &-title {
+            font-size: 40px;
+            font-weight: 600;
+            line-height: 63px;
+            margin-bottom: 39px;
+            & span {
+                font-size: 50px;
+                font-weight: 800;
+                color: #e33e54;
+            }
+        }
+        &-list {
+            font-size: 16px;
+            line-height: 24px;
+            padding-left: 55px;
+            max-width: 570px;
+        }
+        &-item {
+            margin-bottom: 28px;
+            position: relative;
+            &:before {
+                content: '';
+                display: inline-block;
+                width: 9px;
+                height: 9px;
+                background-color: #ea6628;
+                border-radius: 50%;
+                position: absolute;
+                left: -30px;
+                top: 7px;
+            }
+        }
+    }
+}

@@ -18,10 +18,11 @@ header.header
             a(href="/")
                 img(src="./assets/images/logo.svg", alt="Логотип")
         nav.header__nav
-            .header__nav-icon
-                span
-                span
-                span
+            .header__nav-icon-wrapper
+                .header__nav-icon
+                    span
+                    span
+                    span
             ul.header__nav-list
                 each val in navLinks
                     li.header__nav-item
