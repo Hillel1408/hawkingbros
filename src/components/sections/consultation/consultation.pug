@@ -1,0 +1,25 @@
+-
+    var socialLinks = [
+        {textLink: 'Вконтакте', href: '#', icon: 'icon-1'},
+        {textLink: 'Телеграм', href: '#', icon: 'icon-3'},
+        {textLink: 'Инстаграм', href: '#', icon: 'icon-instagram'},
+        {textLink: 'Whatsapp', href: '#', icon: 'icon-4'},
+    ]
+section.consultation
+    .container
+        h2.consultation__title Необходима консультация?
+        span.consultation__subtitle оставьте заявку или свяжитесь с нами в социальных сетях
+        ul.social-links.consultation__social-links
+            each val in socialLinks
+                li
+                    a(class= val.icon href= val.href)= val.textLink
+        .consultation__form
+            p.consultation__form-title 
+                | Для 
+                span консультации 
+                | заполните форму!
+            p.text.consultation__form-text С Вами свяжутся в ближайшее время
+            form
+                input(placeholder="Ваше имя", name="name").consultation__form-input
+                input(placeholder="Ваш телефон", name="tel", type="tel").consultation__form-input
+                input(type="submit").consultation__form-btn отправить
