@@ -22,6 +22,11 @@
             font-size: 14px;
             line-height: 17px;
             color: $footerText;
+            @media (any-hover: hover) {
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
         }
         &-item {
             &:not(:last-child) {
@@ -84,6 +89,7 @@
             }
             a {
                 color: $mainColor;
+                transition: all 0.3s ease 0s;
                 &.icon-1:before {
                     font-size: 13.42px;
                 }
@@ -95,6 +101,11 @@
                 }
                 &.icon-4:before {
                     font-size: 19px;
+                }
+                @media (any-hover: hover) {
+                    &:hover {
+                        color: darken($mainColor, 15%);
+                    }
                 }
             }
         }

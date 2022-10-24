@@ -25,6 +25,10 @@ body.lock {
     font-size: 16px;
     font-weight: 400;
     line-height: 30px;
+    @media (max-width: ($md4 + px)) {
+        font-size: 14px;
+        line-height: 26px;
+    }
 }
 .title {
     font-size: 40px;

@@ -25,7 +25,10 @@
         text-align: center;
         position: relative;
         &:after {
-            content: url('/assets/images/2.png');
+            content: '';
+            background-image: url('../images/2.png');
+            width: 1189px;
+            height: 418px;
             position: absolute;
             left: 0;
             top: -50px;

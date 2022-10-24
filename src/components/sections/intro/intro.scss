@@ -11,6 +11,12 @@
             margin-bottom: 30px;
             margin-top: 26px;
         }
+        @media (max-width: ($md4 + px)) {
+            font-size: 30px;
+            line-height: 37px;
+            margin-bottom: 11px;
+            margin-top: 11px;
+        }
     }
     &__links {
         display: flex;
@@ -20,6 +26,9 @@
         margin-bottom: 81px;
         @media (max-width: ($md3 + px)) {
             margin-bottom: 60px;
+        }
+        @media (max-width: ($md4 + px)) {
+            margin-bottom: 16px;
         }
         &-item {
             display: flex;
@@ -56,11 +65,14 @@
     &__block {
         position: relative;
         &:after {
-            content: url('/assets/images/1.png');
+            content: '';
+            background-image: url('../images/1.png');
             position: absolute;
             top: 0;
             right: -180px;
             z-index: -1;
+            width: 766px;
+            height: 541px;
             @media (max-width: 1600px) {
                 right: 0;
             }
