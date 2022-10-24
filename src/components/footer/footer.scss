@@ -34,12 +34,18 @@
             }
         }
     }
-    &__flex-block {
-        display: flex;
-        justify-content: space-between;
-        gap: 50px;
-        @media (max-width: (1000px)) {
-            gap: 20px;
+    &__flex {
+        &-block {
+            display: flex;
+            justify-content: space-between;
+        }
+        &-item {
+            &:first-child {
+                margin-right: 50px;
+                @media (max-width: (1300px)) {
+                    margin-right: 20px;
+                }
+            }
         }
     }
     &__grid-block {
