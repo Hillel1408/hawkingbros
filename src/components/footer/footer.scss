@@ -1,0 +1,109 @@
+.footer {
+    background: $footerBg;
+    padding: 88px 0 92px 0;
+    @media (max-width: ($md3 + px)) {
+        padding: 26px 0;
+    }
+    &__title {
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 27px;
+        color: $footerText;
+        margin-bottom: 18px;
+        display: block;
+        text-transform: uppercase;
+        @media (max-width: ($md3 + px)) {
+            display: none;
+        }
+    }
+    &__list {
+        &-link {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 17px;
+            color: $footerText;
+        }
+        &-item {
+            &:not(:last-child) {
+                margin-bottom: 19px;
+            }
+        }
+    }
+    &__flex-block {
+        display: flex;
+        justify-content: space-between;
+        gap: 50px;
+        @media (max-width: (1000px)) {
+            gap: 20px;
+        }
+    }
+    &__grid-block {
+        display: flex;
+        gap: 20px;
+        justify-content: space-between;
+        @media (max-width: ($md3 + px)) {
+            justify-content: center;
+        }
+    }
+    &__text {
+        font-size: 14px;
+        line-height: 24px;
+        color: $footerText;
+        display: flex;
+        align-items: center;
+        @media (max-width: ($md3 + px)) {
+            display: none;
+        }
+        &:nth-child(2) {
+            margin-bottom: 8px;
+        }
+        &:nth-child(3) {
+            margin-bottom: 27px;
+        }
+        &.icon-12:before {
+            margin-right: 8px;
+            font-size: 15px;
+        }
+        &.icon-13:before {
+            margin-left: 2px;
+            margin-right: 10px;
+            font-size: 16px;
+        }
+        span {
+            color: $mainColor;
+            margin-right: 5px;
+            &:last-child {
+                margin-left: 10px;
+            }
+        }
+    }
+    &__social-links {
+        li {
+            &:not(:last-child) {
+                margin-right: 36px;
+            }
+            a {
+                color: $mainColor;
+                &.icon-1:before {
+                    font-size: 13.42px;
+                }
+                &.icon-3:before {
+                    font-size: 19.17px;
+                }
+                &.icon-instagram:before {
+                    font-size: 19px;
+                }
+                &.icon-4:before {
+                    font-size: 19px;
+                }
+            }
+        }
+    }
+    &__column {
+        &:not(:last-child) {
+            @media (max-width: ($md3 + px)) {
+                display: none;
+            }
+        }
+    }
+}

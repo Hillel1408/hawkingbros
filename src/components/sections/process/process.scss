@@ -3,10 +3,16 @@
     @media (max-width: ($md3 + px)) {
         padding: 26px 0;
     }
+    @media (max-width: ($md4 + px)) {
+        padding: 6px 0;
+    }
     &__title {
         margin-bottom: 51px;
         @media (max-width: ($md3 + px)) {
             margin-bottom: 30px;
+        }
+        @media (max-width: ($md4 + px)) {
+            margin-bottom: 10px;
         }
     }
     &__list {
@@ -35,6 +41,8 @@
             }
             @media (max-width: (600px)) {
                 width: 100%;
+                height: auto;
+                margin-bottom: 20px;
             }
             &:before {
                 counter-increment: myCounter;
@@ -42,7 +50,7 @@
                 font-size: 70px;
                 line-height: 85px;
                 font-weight: 700;
-                color: #e33e54;
+                color: $secondaryColor;
                 opacity: 0.2;
                 position: absolute;
                 left: 4px;

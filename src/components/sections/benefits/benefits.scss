@@ -3,14 +3,23 @@
     @media (max-width: ($md3 + px)) {
         padding-top: 30px;
     }
+    @media (max-width: ($md4 + px)) {
+        padding-top: 15px;
+    }
     &__title {
         margin-bottom: 50px;
         @media (max-width: ($md3 + px)) {
             margin-bottom: 37px;
         }
+        @media (max-width: ($md4 + px)) {
+            margin-bottom: 26px;
+        }
     }
     &__text {
         margin-bottom: 50px;
+        @media (max-width: ($md4 + px)) {
+            margin-bottom: 23px;
+        }
     }
     &__flex-block {
         display: flex;
@@ -51,7 +60,7 @@
         margin-bottom: 32px;
         &:before {
             font-size: 79px;
-            color: #4c858b;
+            color: $mainColor;
         }
         @media (max-width: ($md3 + px)) {
             margin-bottom: 26px;
@@ -69,7 +78,7 @@
     }
     &__flex-text {
         span {
-            color: #e33e54;
+            color: $secondaryColor;
         }
     }
 }

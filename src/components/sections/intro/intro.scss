@@ -9,13 +9,14 @@
             font-size: 45px;
             line-height: 55px;
             margin-bottom: 30px;
+            margin-top: 26px;
         }
     }
     &__links {
         display: flex;
         padding: 14px 0;
-        border-top: 1px solid #e5e5e5;
-        border-bottom: 1px solid #e5e5e5;
+        border-top: 1px solid $borderColor;
+        border-bottom: 1px solid $borderColor;
         margin-bottom: 81px;
         @media (max-width: ($md3 + px)) {
             margin-bottom: 60px;
@@ -29,7 +30,7 @@
             }
             &.icon-8 {
                 font-size: 7px;
-                color: #4c858b;
+                color: $mainColor;
                 &:before {
                     position: absolute;
                     right: -13px;
@@ -40,9 +41,9 @@
             font-weight: 400;
             font-size: 12px;
             line-height: 15px;
-            color: #b1b1b1;
+            color: $inputPh;
             &._active {
-                color: #4c858b;
+                color: $mainColor;
             }
         }
     }
@@ -83,15 +84,21 @@
                 line-height: 52px;
                 margin-bottom: 21px;
             }
+            @media (max-width: ($md4 + px)) {
+                line-height: 37px;
+            }
             & span {
                 font-size: 50px;
                 font-weight: 800;
-                color: #e33e54;
+                color: $secondaryColor;
                 @media (max-width: ($md2 + px)) {
                     display: block;
                 }
                 @media (max-width: ($md3 + px)) {
                     font-size: 40px;
+                }
+                @media (max-width: ($md4 + px)) {
+                    line-height: 37px;
                 }
             }
         }
@@ -102,6 +109,12 @@
             max-width: 570px;
             @media (max-width: ($md2 + px)) {
                 max-width: 100%;
+            }
+            @media (max-width: ($md3 + px)) {
+                padding-left: 45px;
+            }
+            @media (max-width: ($md4 + px)) {
+                padding-left: 35px;
             }
         }
         &-item {
@@ -114,7 +127,7 @@
                 display: inline-block;
                 width: 9px;
                 height: 9px;
-                background-color: #ea6628;
+                background-color: $socialIcons;
                 border-radius: 50%;
                 position: absolute;
                 left: -30px;

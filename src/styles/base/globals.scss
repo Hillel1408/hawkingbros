@@ -1,13 +1,6 @@
-$minWidth: 320;
-$maxWidth: 1920;
-$maxWidthContainer: 1220;
-$md1: $maxWidthContainer + 30;
-$md2: 992;
-$md3: 768;
-$md4: 320;
-
-$fontFamily: 'Montserrat', sans-serif;
-
+body.lock {
+    overflow: hidden !important;
+}
 .container {
     max-width: $maxWidthContainer + px;
     margin: 0 auto;
@@ -25,6 +18,8 @@ $fontFamily: 'Montserrat', sans-serif;
 }
 .social-links {
     font-size: 0;
+    display: flex;
+    align-items: center;
 }
 .text {
     font-size: 16px;
@@ -38,5 +33,9 @@ $fontFamily: 'Montserrat', sans-serif;
     @media (max-width: ($md3 + px)) {
         font-size: 30px;
         line-height: 37px;
+    }
+    @media (max-width: ($md4 + px)) {
+        font-size: 20px;
+        line-height: 30px;
     }
 }

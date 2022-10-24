@@ -1,10 +1,25 @@
 .video {
     padding: 60px 0;
+    @media (max-width: ($md4 + px)) {
+        padding: 50px 0;
+    }
     &__title {
         margin-bottom: 66px;
+        @media (max-width: ($md3 + px)) {
+            margin-bottom: 34px;
+        }
+        @media (max-width: ($md4 + px)) {
+            margin-bottom: 28px;
+        }
     }
     &__text {
         margin-bottom: 100px;
+        @media (max-width: ($md3 + px)) {
+            margin-bottom: 34px;
+        }
+        @media (max-width: ($md4 + px)) {
+            margin-bottom: 24px;
+        }
     }
     &__wrapper {
         text-align: center;

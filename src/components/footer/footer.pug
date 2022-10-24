@@ -1,1 +1,74 @@
+-
+    var socialLinks = [
+        {textLink: 'Вконтакте', href: '#', icon: 'icon-1'},
+        {textLink: 'Телеграм', href: '#', icon: 'icon-3'},
+        {textLink: 'Инстаграм', href: '#', icon: 'icon-instagram'},
+        {textLink: 'Whatsapp', href: '#', icon: 'icon-4'},
+    ]
+    var navList = [
+        [
+            {textLink: 'Дымоходы', href: '#'},
+            {textLink: 'Дымососы', href: '#'},
+            {textLink: 'Печи для дома', href: '#'},
+            {textLink: 'Печи для бани', href: '#'},
+        ],
+        [
+            {textLink: 'Камины', href: '#'},
+            {textLink: 'Силикат кальция', href: '#'},
+            {textLink: 'Котлы', href: '#'},
+            {textLink: 'Ещё', href: '#'},
+        ],
+        [
+            {textLink: 'Каталог', href: '#'},
+            {textLink: 'Установка и монтаж', href: '#'},
+            {textLink: 'Отзывы', href: '#'},
+            {textLink: 'Ликвидация товара', href: '#'},
+        ],
+        [
+            {textLink: 'Полезное', href: '#'},
+            {textLink: 'Контакты', href: '#'},
+            {textLink: 'Оплата и доставка', href: '#'},
+        ]
+    ]
 
+footer.footer
+    .container
+        .footer__grid-block
+            .footer__column
+                span.footer__title Каталог
+                .footer__flex-block
+                    .footer__flex-item
+                        ul.footer__list
+                            each val in navList[0]
+                                li.footer__list-item
+                                    a.footer__list-link(href= val.href)= val.textLink
+                    .footer__flex-item
+                        ul.footer__list
+                            each val in navList[1]
+                                li.footer__list-item
+                                    a.footer__list-link(href= val.href)= val.textLink
+            .footer__column
+                span.footer__title Информация
+                .footer__flex-block
+                    .footer__flex-item
+                        ul.footer__list
+                            each val in navList[2]
+                                li.footer__list-item
+                                    a.footer__list-link(href= val.href)= val.textLink
+                    .footer__flex-item
+                        ul.footer__list
+                            each val in navList[3]
+                                li.footer__list-item
+                                    a.footer__list-link(href= val.href)= val.textLink
+            .footer__column
+                span.footer__title Время работы
+                p.footer__text.icon-12 
+                    span пн-пт 
+                    | 9:00 – 20:00   
+                    span сб-вс 
+                    | 10:00 – 18:00
+                p.footer__text.icon-13 г. Санкт - Петербург ,ул. Тамбасова д.7
+                ul.social-links.footer__social-links
+                    each val in socialLinks
+                        li
+                            a(class= val.icon href= val.href)= val.textLink
